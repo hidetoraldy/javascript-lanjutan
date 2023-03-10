@@ -34,33 +34,41 @@
 
 //? Asynchronus Callback
 //* Vanilla Javascript
-function getDataMahasiswa(url, success, error){
-    let xhr = new XMLHttpRequest();
+// function getDataMahasiswa(url, success, error){
+//     let xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState === 4){
-            if(xhr.status === 200){
-                success(xhr.response);
-            } else if(xhr.status === 404){
-                error();
-            }
-        }
-    }
-
-    xhr.open('get', url);
-    xhr.send();
-}
-
-getDataMahasiswa('data/mahasiswa.json', results => {
-    console.log(results);
-}, () => {
-    
-});
-//* JQuery
-// console.log('mulai');
-// $.ajax({
-//     url: 'mahasiswa.json',
-//     success: (mhs) => {
-//         mhs.forEach()
+//     xhr.onreadystatechange = function(){
+//         if(xhr.readyState === 4){
+//             if(xhr.status === 200){
+//                 success(xhr.response);
+//             } else if(xhr.status === 404){
+//                 error();
+//             }
+//         }
 //     }
+
+//     xhr.open('get', url);
+//     xhr.send();
+// }
+
+// console.log('satu');
+// getDataMahasiswa('data/mahasiswa.json', results => {
+//     const mhs = JSON.parse(results);
+//     mhs.forEach(m => console.log(m.nama));
+// }, () => {
+
 // });
+// console.log('dua');
+
+//* JQuery
+console.log('mulai');
+$.ajax({
+    url: 'data/mahasiswa.json',
+    success: (mhs) => {
+        mhs.forEach(m => console.log(m.nama));
+    },
+    error: (e) => {
+        console.log(e.responseText);
+    }
+});
+console.log('selesai');
