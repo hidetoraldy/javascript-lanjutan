@@ -1,0 +1,16 @@
+[
+    {
+        "nama"          : "Aldy",
+        "nim"           : "10517082",
+        "email"         : "hidetoraldy@gmail.com",
+        "jurusan"       : "Sistem Informasi",
+        "idDosenWali"   : 1
+    },
+    {
+        "nama"          : "Ramadhan",
+        "nim"           : "02",
+        "email"         : "haruchanbrawler@gmail.com",
+        "jurusan"       : "Sistem Komputer",
+        "idDosenWali"   : 2
+    }
+]
